@@ -1,0 +1,961 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.quad9.net/dns-query
+  fallback:
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.adguard.com/dns-query
+    - https://dnsforge.de/dns-query
+    - https://dns.quad9.net/dns-query
+
+proxies:
+  - {name: ALB 🇦🇱 Tirana Glysit, server: 31.171.153.131 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: ALB 🇦🇱 Tirana 2 Glysit, server: 31.171.155.35 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: ALB 🇦🇱 Tirana 3 Glysit, server: 31.171.155.101 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ARG 🇦🇷 Buenos Aires Glysit, server: 91.206.168.9 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: ARG 🇦🇷 Buenos Aires 2 Glysit, server: 91.206.168.41 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUS 🇦🇺 Melbourne Glysit, server: 103.192.80.219 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUS 🇦🇺 Brisbane Glysit, server: 144.48.39.107 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUS 🇦🇺 Perth Glysit, server: 124.150.139.123 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUS 🇦🇺 Sydney Glysit, server: 45.125.247.107 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUS 🇦🇺 Adelaide Glysit, server: 45.248.79.21 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AUT 🇦🇹 Vienna Glysit, server: 37.19.195.81 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: AZR 🇦🇿 Baku Glysit,  server: 62.212.239.43 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: AZR 🇦🇿 Baku 2 Glysit, server: 62.212.239.44 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: AZR 🇦🇿 Baku 3 Glysit, server: 94.20.154.59 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: AZR 🇦🇿 Baku 4 Glysit, server: 94.20.154.85 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: AZR 🇦🇿 Baku 5 Glysit, server: 94.20.154.83 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6}
+  - {name: BiH 🇧🇦 Sarajevo Glysit, server: 185.99.3.66 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: BEL 🇧🇪 Belgium Glysit, server: 91.90.123.187 Glysit,  port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: BEL 🇧🇪 Belgium 2 Glysit, server: 91.90.123.197 Glysit,  port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: BRA 🇧🇷 Sao Paulo Glysit, server: 138.199.58.83 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: BRA 🇧🇷 Sao Paulo 2 Glysit, server: 45.231.207.72 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: CHL ⃕ ␋ 🇨🇱 San Antonio Glysit, server: 31.169.121.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: CYP 🇨🇾 Nicosia Glysit, server: 195.47.194.79 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: CAN 🇨🇦 Toronto Glysit, server: 37.19.211.117 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: CAN 🇨🇦 Vancouver Glysit, server: 208.78.41.202 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: CAN 🇨🇦 Montreal Glysit, server: 91.245.254.77 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: COL 🇨🇴 Bagotá Glysit, server: 45.129.32.32 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: CROA 🇭🇷 Zagreb Glysit, server: 85.10.56.227 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: CROA 🇭🇷 Zagreb 2 Glysit, server: 85.10.51.89 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: CROA 🇭🇷 Zagreb 3 Glysit, server: 176.222.34.121 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: CZE 🇨🇿 Prague Glysit, server: 185.180.14.149 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: DNK 🇩🇰 Copenhagen Glysit, server: 89.45.7.51 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: DNK 🇩🇰 Copenhagen 2 Glysit, server: 193.29.107.211 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: DZA 🇩🇿 Algiers Glysit, server: 62.197.144.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: EST 🇪🇪 Tallinn Glysit, server: 185.174.159.131 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: FRA 🇫🇷 Paris 1 Glysit, server: 143.244.57.106 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: FRA 🇫🇷 Paris 2 Glysit, server: 143.244.57.119 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: FRA 🇫🇷 Bordeaux Glysit, server: 185.108.106.140 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: FRA 🇫🇷 Bordeaux 2 Glysit, server: 185.108.106.140 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: FRA 🇫🇷 Bordeaux 3 Glysit, server: 185.108.106.164 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: FRA 🇫🇷 Marseille Glysit, server: 185.166.84.59 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: FRA 🇫🇷 Roubaix Glysit, server: 51.210.113.68 Glysit, port: 810 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao Glysit, udp: true}
+  - {name: FRA 🇫🇷 Roubaix 3 Glysit, server: 51.210.113.68 Glysit, port: 807 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao Glysit, udp: true}
+  - {name: GEO 🇬🇪🇲 Tbilisi Glysit, server: 91.239.207.234 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: GER 🇩🇪 Frankfurt Glysit, server: 185.102.219.48 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: GER 🇩🇪 Frankfurt 2 Glysit, server: 138.199.19.164 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: GER 🇩🇪 Frankfurt 3 Glysit, server: 156.146.33.85 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: GER 🇩🇪 Frankfurt 4 Glysit, server: 18.185.63.41 Glysit, port: 809 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao Glysit, udp: true}
+  - {name: GER 🇩🇪 Frankfurt 5 Glysit, server: 185.104.184.78 Glysit, port: 809 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao Glysit, udp: true}
+  - {name: GER 🇩🇪 Berlin 1 Glysit, server: 193.29.106.195 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: GER 🇩🇪 Berlin 2 Glysit, server: 193.29.106.85 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: GER 🇩🇪 Berlin 3 Glysit, server: 193.29.106.187 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: GER 🇩🇪 Berlin 4 Glysit, server: 193.29.106.155 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: GRC 🇬🇷 Athens Glysit, server: 91.240.243.9 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: HUN 🇭🇺 Budapest 1 Glysit, server: 185.252.223.83 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ISL 🇮🇸 Reykjavik Glysit, server: 45.133.193.107 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: ISL 🇮🇸 Reykjavik 2 Glysit, server: 45.133.193.195 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ITA 🇮🇹 Milan 1 Glysit, server: 84.17.58.159 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ITA 🇮🇹 Milan 2 Glysit, server: 212.102.55.67 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ITA 🇮🇹 Milan 3 Glysit, server: 212.102.54.177 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: ITA 🇮🇹 Milan 4 Glysit, server: 84.17.58.202 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: ITA 🇮🇹 Rome Glysit, server: 82.102.26.94 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: IRL 🇮🇪 Dublin Glysit, server: 185.252.222.101 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: IRL 🇮🇪 Dublin 2 Glysit, server: 185.252.222.117 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: IRL 🇮🇪 Dublin 3 Glysit, server: 5.157.13.101 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ISR 🇮🇱 Tel Aviv Glysit, server: 87.239.255.116 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: IND 🇮🇳 Indore Glysit, server: 103.39.134.61 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: IND 🇮🇳 Chennai Glysit, server: 103.94.27.115 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: IND 🇮🇳 Chennai 2 Glysit, server: 103.94.27.181 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: LUX 🇱🇺 Luxembourg Glysit, server: 185.153.151.167 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: LIT 🇱🇹 Vilnius Glysit, server: 188.92.78.150 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: LVA 🇱🇻 Riga Glysit, server: 91.203.69.146 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: MYS 🇲🇾 Kuala Lumpur Glysit, server: 42.0.30.177 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: MDA 🇲🇩 Chișinău Glysit, server: 194.33.40.114 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: MKD 🇲🇰 Skopje Glysit, server: 185.225.28.91 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: MEX 🇲🇽 Mexico City Glysit, server: 194.41.112.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: MLT 🇲🇹 Valletta Glysit, server: 130.185.255.38 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: NGA 🇳🇬 Lagos Glysit, server: 102.165.23.6 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: NGA 🇳🇬 Lagos 2 Glysit, server: 102.165.23.7 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: NZL 🇳🇿 Auckland Glysit, server: 180.149.231.3 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: NLD 🇳🇱 Amsterdam 1 Glysit, server: 143.244.42.94 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: NLD 🇳🇱 Amsterdam 2 Glysit, server: 212.102.35.199 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: NLD 🇳🇱 Amsterdam 3 Glysit, server: 212.102.35.200 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: NOR 🇳🇴 Oslo Glysit, server: 45.12.223.195 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: PNM 🇵🇦 Panama Glysit, server: 185.244.139.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: POL 🇵🇱 Warsaw 1 Glysit, server: 84.17.55.134 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: POL 🇵🇱 Gdansk Glysit, server: 5.187.49.149 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: PRT 🇵🇹 Lisbon Glysit, server: 91.205.230.140 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: PRT 🇵🇹 Porto Glysit, server: 194.39.127.23 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: PRU 🇵🇪 Lima Glysit, server: 193.218.35.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: ROU 🇷🇴 Bucharest Glysit, server: 185.102.217.155 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: RUS 🇷🇺 Moscow Glysit, server: 92.38.138.150 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: RUS 🇷🇺 Moscow 2 Glysit, server: 92.38.138.143 Glysit, port: 43893 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: YyCBeDdYX4cadHpCkkmdJLq8 Glysit, udp: true}
+  - {name: SOAF 🇿🇦 Johannesburg Glysit, server: 154.127.50.136 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: SPN 🇪🇸 Barcelona Glysit, server: 82.102.26.237 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: SPN 🇪🇸 Madrid Glysit, server: 89.37.95.27 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: SPN 🇪🇸 Valencia Glysit, server: 185.153.150.58 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: SVK 🇸🇰 Bratislava Glysit, server: 185.76.8.217 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: SWIT 🇨🇭 Zurich Glysit, server: 156.146.62.36 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: SWE 🇸🇪 Stockholm 1 Glysit, server: 185.76.9.34 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: TUR 🇹🇷 Istanbul Glysit, server: 107.150.94.13 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UKR 🇺🇦 Kyiv Glysit, server: 156.146.50.97 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UKR 🇺🇦 Kyiv 2 Glysit, server: 156.146.50.107 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UAE 🇦🇪 Dubai 1 Glysit, server: 176.125.231.19 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UAE 🇦🇪 Dubai 2 Glysit, server: 176.125.231.20 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UAE 🇦🇪 Dubai 3 Glysit, server: 176.125.231.38 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: UK 🇬🇧 Glasgow Glysit, server: 185.108.105.47 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: UK 🇬🇧 London 1 Glysit, server: 81.19.214.32 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: UK 🇬🇧 Manchester Glysit, server: 91.90.121.139 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UK 🇬🇧 Manchester 2 Glysit, server: 84.39.114.157 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: UK 🇬🇧 London 3 Glysit, server: 81.19.214.32 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: UK 🇬🇧 London 4 Glysit, server: 89.34.99.83 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: USA 🇺🇸 Bend 1 Glysit, server: 45.43.14.83 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Bend 2 Glysit, server: 154.16.168.188 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Bend 1 2 Glysit, server: 45.43.14.83 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Bend 2 2 Glysit, server: 45.43.14.84 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Boston 1 Glysit, server: 173.237.207.13 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Boston 2 Glysit, server: 173.237.207.42 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Boston 3 Glysit, server: 173.237.207.30 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Houston 1 Glysit, server: 199.10.64.83 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Houston 2 Glysit, server: 199.10.64.243 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Houston 3 Glysit, server: 199.10.64.101 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Houston 4 Glysit, server: 199.10.64.243 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Detroit 1 Glysit, server: 104.244.208.213 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Detroit 2 Glysit, server: 104.244.210.125 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Detroit 3 Glysit, server: 104.244.209.101 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Detroit 4 Glysit, server: 104.244.210.117 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Chicago Glysit, server: 138.199.42.139 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Chicago 1 Glysit, server: 138.199.42.141 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Chicago 2 Glysit, server: 155.254.28.141 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 St. Louis 1 Glysit, server: 148.72.174.41 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 St. Louis 2 Glysit, server: 148.72.174.37 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Charlotte Glysit, server: 192.154.255.52 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Charlotte 1 Glysit, server: 155.254.29.165 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Charlotte 2 Glysit, server: 155.254.28.141 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 New York 1 Glysit, server: 138.199.40.162 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 New York 2 Glysit, server: 138.199.40.172 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Kansas City 1 Glysit, server: 142.54.189.243 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Kansas City 2 Glysit, server: 142.54.189.243 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Phoenix Glysit, server: 199.58.187.5 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 San Francisco Glysit, server: 185.124.240.171 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Phoenix 1 Glysit, server: 199.58.187.15 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Phoenix 2 Glysit, server: 199.58.187.16 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Tampa 1 Glysit, server: 209.216.92.18 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Tampa 2 Glysit, server: 209.216.92.19 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Tampa 3 Glysit, server: 209.216.92.222 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Tampa 4 Glysit, server: 209.216.92.3 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Seattle 4 Glysit, server: 212.102.46.37 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Los Angeles 1 Glysit, server: 89.187.187.149 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Los Angeles 2 Glysit, server: 138.199.9.207 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Los Angeles 3 Glysit, server: 45.129.32.34 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Phoenix 1 2 Glysit, server: 199.58.187.5 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Phoenix 2 2 Glysit, server: 199.58.187.67 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Latham 1 Glysit, server: 154.16.169.5 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Latham 2 Glysit, server: 45.43.19.82 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Latham 3 Glysit, server: 45.43.19.82 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Miami Glysit, server: 45.87.214.253 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Buffalo Glysit, server: 172.93.153.149 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Atlanta Glysit, server: 66.115.169.35 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Orlando 1 Glysit, server: 66.115.182.101 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Orlando 2 Glysit, server: 66.115.182.69 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Kansas City Glysit, server: 173.208.149.197 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Las Vegas 1 Glysit, server: 79.110.54.117 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: USA 🇺🇸 Las Vegas 2 Glysit, server: 79.110.54.91 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: USA 🇺🇸 Las Vegas 3 Glysit, server: 79.110.54.91 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH Glysit, udp: true}
+  - {name: VEN 🇻🇪 Caracas Glysit, server: 45.149.3.3 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+
+  - {name: ARG 🇦🇷 Buenos Aires new Glysit, server: 131.255.4.219 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: AUS 🇦🇺 Alexandria new  Glysit, server: 149.28.186.148 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: AUT 🇦🇹 Graz new Glysit, server: 151.236.30.184 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BGR 🇧🇬 Sofia 2 new Glysit, server: 194.68.225.104 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BGR 🇧🇬 Sofia 3 new Glysit, server: 194.68.225.104 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BGR 🇧🇬 Sofia 4 new Glysit, server: 194.68.225.28 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BGR 🇧🇬 Sofia new Glysit, server: 194.68.225.28 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BEL 🇧🇪 Flanders 2 new Glysit, server: 192.71.249.240 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BEL 🇧🇪 Flanders new Glysit, server: 194.71.227.178 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BRA 🇧🇷 Sao Paulo 2 new Glysit, server: 185.192.124.183 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: BRA 🇧🇷 Sao Paulo new Glysit, server: 209.14.0.228 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CAN 🇨🇦 Montreal 2 new Glysit, server: 192.71.227.64 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CAN 🇨🇦 Montreal new Glysit, server: 192.71.227.17 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CHL 🇨🇱 Viña del Mar new Glysit, server: 37.235.52.112 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CYP 🇨🇾 Nicosia 2 new Glysit, server: 213.169.137.221 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CYP 🇨🇾 Nicosia new Glysit, server: 213.169.137.214 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: CZE 🇨🇿 Prague new Glysit, server: 193.235.207.28 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: DNK 🇩🇰 Copenhagen 2 new Glysit, server: 192.36.27.79 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: DNK 🇩🇰 Copenhagen new Glysit, server: 192.36.27.59 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: EST 🇪🇪 Tallinn new Glysit, server: 37.252.5.234 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: FIN 🇫🇮 Helsinki new Glysit, server: 37.143.129.185 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: FRA 🇫🇷 Gravelines new Glysit, server: 145.239.75.87 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: FRA 🇫🇷 Strasbourg new Glysit, server: 51.77.194.83 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: GER 🇩🇪 Düsseldorf new Glysit, server: 161.97.131.160 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: GER 🇩🇪 Nuremberg new Glysit, server: 213.136.80.36 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: HKG 🇭🇰 Central new Glysit, server: 203.23.128.94 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: HUN 🇭🇺 Budapest new Glysit, server: 194.71.130.160 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: ISL 🇮🇸 Hafnarfjordur new Glysit, server: 37.235.49.48 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: IND 🇮🇳 Bengaluru new Glysit, server: 139.59.30.221 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: IRL 🇮🇪 Tallaght 2 new Glysit, server: 185.108.129.158 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: IRL 🇮🇪 Tallaght new Glysit, server: 185.108.129.159 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: ITA 🇮🇹 Milan new Glysit, server: 95.174.23.218 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: JPN 🇯🇵 Tokyo new Glysit, server: 45.114.130.92 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: LUX 🇱🇺 Luxembourg 2 new Glysit, server: 172.255.248.39 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: LUX 🇱🇺 Luxembourg new Glysit, server: 172.255.248.40 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: MDA 🇲🇩 Chisinau new Glysit, server: 192.121.87.89 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: MLT 🇲🇹 Safi new Glysit, server: 185.89.238.36 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: MYS 🇲🇾 Kuala Lumpur new Glysit, server: 202.59.10.102 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: NLD 🇳🇱 Amsterdam new Glysit, server: 88.208.7.204 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: NOR 🇳🇴 Oslo 2 new Glysit, server: 194.68.32.29 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: NOR 🇳🇴 Oslo 3 new Glysit, server: 194.68.32.22 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: NOR 🇳🇴 Oslo new Glysit, server: 194.68.32.22 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: POL 🇵🇱 Wroclaw 2 new Glysit, server: 54.37.139.110 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: POL 🇵🇱 Wroclaw new Glysit, server: 54.37.136.249 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: PRT 🇵🇹 Lisbon new Glysit, server: 185.113.143.189 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: RUS 🇷🇺 Moscow 2 new Glysit, server: 83.217.9.76 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: RUS 🇷🇺 Moscow new Glysit, server: 31.192.104.206 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SNG 🇸🇬 Singapore new Glysit, server: 194.233.65.67 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SOAF 🇿🇦 Cape Town 2 new Glysit, server: 129.232.222.74 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SOAF 🇿🇦 Cape Town new Glysit, server: 197.189.202.25 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SPN 🇪🇸 Madrid new Glysit, server: 37.143.130.213 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SVK 🇸🇰 Bratislava new Glysit, server: 188.123.123.133 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SVN 🇸🇮 Ljubljana new Glysit, server: 192.71.244.49 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SWE 🇸🇪 Stockholm new Glysit, server: 46.246.93.59 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: SWIT 🇨🇭 Zurich new Glysit, server: 212.237.210.158 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: THA 🇹🇭 Bangkok new Glysit, server: 43.254.132.220 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: TUR 🇹🇷 Istanbul new Glysit, server: 185.227.137.209 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: UK 🇬🇧 London new Glysit, server: 176.10.80.6 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: UKR 🇺🇦 Kyiv new Glysit, server: 147.78.3.242 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia new Glysit, server: 213.174.130.129 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia 2 new Glysit, server: 213.174.130.130 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia 3 new Glysit, server: 213.174.159.246 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia 4 new Glysit, server: 213.174.159.247 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia 5 new Glysit, server: 213.174.158.181 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  - {name: USA 🇺🇲 Virginia 6 new Glysit, server: 213.174.130.129 Glysit, port: 989 Glysit, type: ss Glysit, cipher: aes-256-cfb Glysit, password: f8f7aCzcPKbsF8p3}
+  
+  - {name: JPN 🇯🇵 Tokyo Glysit, server: 138.199.22.132 Glysit, port: 33992 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: 8n6pwAcrrv2pj6tFY2p3TbQ6 Glysit, udp: true}
+  - {name: JPN 🇯🇵 Tokyo 2 Glysit, server: 185.168.20.113 Glysit, port: 809 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao}
+  - {name: JPN 🇯🇵 Tokyo 3 Glysit, server: 185.160.26.170 Glysit, port: 809 Glysit, type: ss Glysit, cipher: chacha20-ietf-poly1305 Glysit, password: G!yBwPWH3Vao}
+  - {name: SNG 🇸🇬 Singapore Glysit, server: 89.187.162.186 Glysit, port: 35294 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: J9Y2ncrdPEC38gwydNFFGBna Glysit, udp: true}
+  - {name: TWN 🇹🇼 Taichung Glysit, server: 188.92.78.137 Glysit, port: 40093 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: x23Z4LGkGDkThZ9Kaz4DURQp Glysit, udp: true}
+  - {name: TWN 🇹🇼 Taichung 2 Glysit, server: 2.58.241.3 Glysit, port: 38033 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: xpQwyV4W5FdA6NMANJJx73US}
+  - {name: TWN 🇹🇼 Taichung 3 Glysit, server: 103.152.151.69 Glysit, port: 39772 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: CUndSZnYsPKcu6Kj8THVMBHD}
+  - {name: TH 🇹🇭 Bangkok Glysit, server: 45.40.54.7 Glysit, port: 38742 Glysit, type: ss Glysit, cipher: aes-256-gcm Glysit, password: DKXfWwc4ebscpXTKpbt85rSH}
+  
+  - {name: BHR 🇧🇭 Dar Kulayb Glysit, server: 15.184.91.216 Glysit, port: 55435 Glysit, type: vmess Glysit, uuid: 8d81b746-53ce-45c5-b8a4-dec28a0c5a80 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: BAH 🇧🇭 Dar Kulayb 2 Glysit, server: 15.184.167.171 Glysit, port: 24527 Glysit, type: vmess Glysit, uuid: f1dc9b61-017e-4909-a9b4-19b8d3c7cae1 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: DNK 🇩🇰 Copenhagen 3 Glysit, server: 5.183.101.204 Glysit, port: 59857 Glysit, type: vmess Glysit, uuid: 4c35d374-dbf2-4e5f-c731-dfa49191825a Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: DNK 🇩🇰 Copenhagen 4 Glysit, server: 5.183.101.200 Glysit, port: 35374 Glysit, type: vmess Glysit, uuid: 62836733-0014-4014-e0e3-908eea2f3063 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: FRA 🇫🇷 France Glysit, server: 199.60.103.228 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: b22b990f-b6dd-4b57-a0e1-ee3f829d413f Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshkit Glysit, ws-headers: {Host: eu-sshkit.v2-ray.cf}}
+  - {name: FRA 🇫🇷 Carpentras Glysit, server: 51.15.229.29 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 9f4adaba-1213-49cd-aad2-2507ab59ca3c Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 51.15.229.29}}
+  - {name: FRA 🇫🇷 Longjumeau Glysit, server: 54.37.18.98 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: c4c24503-a357-40d1-b9bd-0dc4264d65e3 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 54.37.18.98}}
+  - {name: FRA 🇫🇷 Paris 3 Glysit, server: 92.222.217.16 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 3d02e7f9-35ff-4219-aa2d-d3e41dbf02df Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 92.222.217.16}}
+  - {name: GER 🇩🇪 GER Glysit, server: 172.67.153.238 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 356ed062-4f58-49c3-bd44-c0b6db1c94ee Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /stream Glysit, ws-headers: {Host: euserv3p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 2 Glysit, server: 46.182.107.94 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.54872833.xyz}}
+  - {name: GER 🇩🇪 GER 3 Glysit, server: euserv18p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 344c0b7d-2c35-4c95-8481-e2fc3c456a06 Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /audio.mp3 Glysit, ws-headers: {Host: euserv18p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 4 Glysit, server: euserv12p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: c0304bc1-f8ff-4108-9bc6-3415d16ae5e3 Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /video Glysit, ws-headers: {Host: euserv12p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 5 Glysit, server: euserv6p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 499737a4-9f18-4e1f-fb38-437e1855fc04 Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /video Glysit, ws-headers: {Host: euserv6p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 6 Glysit, server: euserv9p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: ca870483-fa7d-4f64-983a-6ed455143aca Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /live Glysit, ws-headers: {Host: euserv9p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 7 Glysit, server: 104.19.45.117 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 8 Glysit, server: 172.67.154.85 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 9 Glysit, server: 104.18.6.138 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 10 Glysit, server: 104.21.48.161 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 11 Glysit, server: cdnde.irteyz.today Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 12 Glysit, server: euserv17p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 4a6cc4a6-491f-4a58-fb45-bf888f0b381f Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /video Glysit, ws-headers: {Host: euserv17p.ezddns.tk}}
+  - {name: GER 🇩🇪 GER 13 Glysit, server: 104.21.48.161 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 14 Glysit, server: 172.67.154.85 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 15 Glysit, server: cdnde.irteyz.today Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 16 Glysit, server: 104.18.7.138 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: GER 🇩🇪 GER 17 Glysit, server: 104.19.45.117 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 3b5e258e-8c5e-45d3-b7d2-02c8f5fc0bb2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: cdnde.irteyz.today}}
+  - {name: HKG 🇭🇰 Hong Kong Glysit, server: 16.162.120.7 Glysit, port: 30070 Glysit, type: vmess Glysit, uuid: 39341fe7-b8b7-4605-a811-af1f1d46d4fb Glysit, alterId: 100 Glysit, cipher: auto Glysit, tls: false}
+  - {name: HKG 🇭🇰 Hong Kong 2 Glysit, server: jb.wocaonimabi666.xyz Glysit, port: 48258 Glysit, type: vmess Glysit, uuid: 5080a95a-27b6-441f-8cee-a6e2ba5c780a Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false}
+  - {name: HKG 🇭🇰 Hong Kong 3 Glysit, server: 20.HKG.ASIA.BIGAIRPORT.NET Glysit, port: 80 Glysit, type: vmess Glysit, uuid: bb511347-6ed5-475c-9ffe-ac7268fdf351 Glysit, alterId: 1 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 20.HKG.ASIA.BIGAIRPORT.NET}}
+  - {name: HKG 🇭🇰 Hong Kong 4 Glysit, server: 18.HKG.ASIA.BIGAIRPORT.NET Glysit, port: 80 Glysit, type: vmess Glysit, uuid: bb511347-6ed5-475c-9ffe-ac7268fdf351 Glysit, alterId: 1 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 18.HKG.ASIA.BIGAIRPORT.NET}}
+  - {name: HKG 🇭🇰 Hong Kong 5 Glysit, server: game-hk.june628.ml Glysit, port: 10163 Glysit, type: vmess Glysit, uuid: 9b9955c9-3562-48b8-a0f7-98ef8258e51f Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /By:June-@CloudLinkGroup Glysit, ws-headers: {Host: game-hk.june628.ml}}
+  - {name: HKG 🇭🇰 Hong Kong 6 Glysit, server: 18.166.65.222 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 56a2ff86-807b-471c-e5f7-463ea41ec65b Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 18.166.65.222}}
+  - {name: HKG 🇭🇰 Hong Kong 7 Glysit, server: 13.70.28.145 Glysit, port: 34323 Glysit, type: vmess Glysit, uuid: 5a2056b9-61c5-4737-b153-b2775ec8bad9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: HUN 🇭🇺 Budapest Glysit, server: 185.225.69.134 Glysit, port: 45081 Glysit, type: vmess Glysit, uuid: 3c3bfd75-dc30-4e76-8940-47e1137e21f9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: IDN 🇮🇩 Bogor Glysit, server: 103.227.254.55 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 390bebf4-e8d1-4651-9658-22e181ed50b1 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 103.227.254.55}}
+  - {name: IND 🇮🇳 Bangalore Glysit, server: 167.71.235.142 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 927f8a2a-f2db-499b-e0f0-b1e344508546 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 167.71.235.142}}
+  - {name: IND 🇮🇳 Bengaluru 2 Glysit, server: ind02.xqkj.cloud Glysit, port: 5062 Glysit, type: vmess Glysit, uuid: 91ff9fa0-2578-48a4-bdd7-fe0fcb24e61f Glysit, alterId: 1 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: ind02.xqkj.cloud}}
+  - {name: IRL 🇮🇪 Dublin 4 Glysit, server: huluwa0528.herokuapp.com Glysit, port: 443 Glysit, type: vmess Glysit, uuid: c0fc8428-034f-414b-9dfb-52b5cf7d25bb Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /c0fc8428-034f-414b-9dfb-52b5cf7d25bb-vmess Glysit, ws-headers: {Host: huluwa0528.herokuapp.com}}
+  - {name: IRL 🇮🇪 Dublin 5 Glysit, server: lulu0528.herokuapp.com Glysit, port: 443 Glysit, type: vmess Glysit, uuid: c0fc8428-034f-414b-9dfb-52b5cf7d25bb Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /c0fc8428-034f-414b-9dfb-52b5cf7d25bb-vmess Glysit, ws-headers: {Host: lulu0528.herokuapp.com}}
+  - {name: JPN 🇯🇵 JPN Glysit, server: 54.199.6.184 Glysit, port: 12347 Glysit, type: vmess Glysit, uuid: d20d7c24-486d-400c-a8f6-e87bc67bf35c Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 54.199.6.184}}
+  - {name: JPN 🇯🇵 Tokyo 4 Glysit, server: 54.238.207.70 Glysit, port: 49663 Glysit, type: vmess Glysit, uuid: 143ee500-5826-43ec-bc14-b026bb37665f Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 54.238.207.70}}
+  - {name: JPN 🇯🇵 Tokyo 5 Glysit, server: jp1.bingbinghouse.com Glysit, port: 443 Glysit, type: trojan Glysit, password: b6nAWUk8cmqRRjxs Glysit, sni: jp1.bingbinghouse.com}
+  - {name: JPN 🇯🇵 Tokyo 6 Glysit, server: 104.19.1.168 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: f299184b-19e0-41a4-9b4b-65fa8f0e691c Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /jj Glysit, ws-headers: {Host: c-jp1.ooxc.cc}}
+  - {name: JPN 🇯🇵 Tokyo 7 Glysit, server: jp.noic.ml Glysit, port: 2309 Glysit, type: vmess Glysit, uuid: d58a968f-1163-4d5e-d22f-b6683300b64f Glysit, alterId: 32 Glysit, cipher: auto Glysit, tls: true}
+  - {name: JPN 🇯🇵 Tokyo 8 Glysit, server: 104.18.207.61 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 356ed062-4f58-49c3-bd44-c0b6db1c94ee Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /stream Glysit, ws-headers: {Host: euserv3p.ezddns.tk}}
+  - {name: JPN 🇯🇵 Tokyo 9 Glysit, server: jp2.noic.ml Glysit, port: 2310 Glysit, type: vmess Glysit, uuid: 65ad710b-e7e3-49ff-f394-a5b842f6e93e Glysit, alterId: 32 Glysit, cipher: auto Glysit, tls: true}
+  - {name: JPN 🇯🇵 Tokyo 10 Glysit, server: japan.mini.00001.zeroyyds.cc Glysit, port: 80 Glysit, type: vmess Glysit, uuid: e6d14923-99e3-4e4d-8dd3-65968a21114b Glysit, alterId: 1 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: japan.mini.00001.zeroyyds.cc}}
+  - {name: LUX 🇱🇺 Bissen 2 Glysit, server: workers.dev Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 7a70e0f7-170d-4ab0-82a0-c40554bfb320 Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /111111.online Glysit, ws-headers: {Host: buyvm.proxypool.ga}}
+  - {name: NLD 🇳🇱 NLD 2 Glysit, server: 46.182.107.154 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.05222027.xyz}}
+  - {name: NLD 🇳🇱 NLD 3 Glysit, server: 46.182.107.44 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.68737987.xyz}}
+  - {name: NLD 🇳🇱 NLD 4 Glysit, server: 46.182.107.45 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.68737987.xyz}}
+  - {name: NLD 🇳🇱 NLD 5 Glysit, server: 46.182.107.157 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 20b30916-e203-412e-8ec0-900f3acd5128 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.73345741.xyz}}
+  - {name: NLD 🇳🇱 NLD 8 Glysit, server: 46.182.107.157 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 20b30916-e203-412e-8ec0-900f3acd5128 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.73345741.xyz}}
+  - {name: NLD 🇳🇱 NLD 9 Glysit, server: 46.182.107.94 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.54872833.xyz}}
+  - {name: NLD 🇳🇱 NLD 10 Glysit, server: 46.182.107.44 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: fe5f69e7-e183-439b-950b-9661ef0651f2 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.68737987.xyz}}
+  - {name: NLD 🇳🇱 NLD 11 Glysit, server: 46.182.107.154 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.05222027.xyz}}
+  - {name: NLD 🇳🇱 NLD 12 Glysit, server: 46.182.107.151 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: f5250c4e-f855-4eff-b73c-a02226d42fe7 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.06321530.xyz}}
+  - {name: NLD 🇳🇱 NLD 13 Glysit, server: 46.182.107.156 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 20b30916-e203-412e-8ec0-900f3acd3588 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.25936911.xyz}}
+  - {name: POL 🇵🇱 Warsaw Glysit, server: 146.59.13.37 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: b79212e2-b670-4d4b-8c22-eb796921b97a Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 146.59.13.37}}
+  - {name: PRC 🇨🇳 China 4  Glysit, server: 23.225.125.195 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/301109172001 Glysit, ws-headers: {Host: www.91370744.xyz}}
+  - {name: PRC 🇨🇳 China 5 Glysit, server: 23.224.158.170 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: aa6449c1-9557-415e-9681-08701767d56e Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/292026011205 Glysit, ws-headers: {Host: www.58245542.xyz}}
+  - {name: RUS 🇷🇺 RUS Glysit, server: 172.67.150.130 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc Glysit, alterId: 233 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: RUS 🇷🇺 RUS 2 Glysit, server: free-russian01-cdn.xiaohouzi.club Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc Glysit, alterId: 233 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: RUS 🇷🇺 RUS 4 Glysit, server: free-russian01-cdn.xiaohouzi.club Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 3d31728e-064d-42b8-b945-f79c008f73fc Glysit, alterId: 233 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: free-russian01-cdn.xiaohouzi.club}}
+  - {name: SGP 🇸🇬 Singapore Glysit, server: 51.79.157.223 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 88b21f86-b8fc-4e92-8a70-ccf4ccc60539 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 51.79.157.223}}
+  - {name: TUR 🇹🇷 Bursa Glysit, server: 185.247.138.25 Glysit, port: 15079 Glysit, type: vmess Glysit, uuid: a1d846ec-9bef-4ffd-e34a-43bb06323ac3 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false}
+  - {name: TWN 🇹🇼 Taipei Glysit, server: 211.23.132.124 Glysit, port: 9233 Glysit, type: vmess Glysit, uuid: be58f4e4-894a-47ee-8836-cf75e74fa9c9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: / Glysit, ws-headers: {Host: 211.23.132.124}}
+  - {name: UK 🇬🇧 London 5 Glysit, server: 51.195.217.20 Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 6c0cb6a9-2389-4b5d-8bec-b14b076f4a4e Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /sshocean Glysit, ws-headers: {Host: 51.195.217.20}}
+  - {name: USA 🇺🇸 USA Glysit, server: nn-ssr4.feiclouddd.me Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 79214731-7f0c-4f2d-a894-13b7df293624 Glysit, alterId: 60 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /sadfasdf Glysit, ws-headers: {Host: nn-ssr4.feiclouddd.me}}
+  - {name: USA 🇺🇸 USA 3 Glysit, server: euserv5p.ezddns.tk Glysit, port: 80 Glysit, type: vmess Glysit, uuid: 60b738e2-3aa4-4cde-c270-20f8cc1ab16a Glysit, alterId: 0 Glysit, cipher: auto Glysit, tls: false Glysit, network: ws Glysit, ws-path: /audio.wav Glysit, ws-headers: {Host: euserv5p.ezddns.tk}}
+  - {name: USA 🇺🇸 USA 4 Glysit, server: nn-ssr4.feiclouddd.me Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 79214731-7f0c-4f2d-a894-13b7df293624 Glysit, alterId: 60 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /sadfasdf Glysit, ws-headers: {Host: nn-ssr4.feiclouddd.me}}
+  - {name: USA 🇺🇸 USA 7 Glysit, server: 23.224.30.70 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 688f4b5d-ce9a-4729-abe5-b66ca96b2ee9 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /footers Glysit, ws-headers: {Host: www.36773818.xyz}}
+  - {name: USA 🇺🇸 California 6 Glysit, server: hk1opuy-node.3366test.com Glysit, port: 13723 Glysit, type: vmess Glysit, uuid: a90597c1-bab3-4217-ad6f-0838675c8638 Glysit, alterId: 10 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /ray Glysit, ws-headers: {Host: hk1opuy-node.3366test.com}}
+  - {name: USA 🇺🇸 California 7 Glysit, server: 107.167.9.124 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/310910211916 Glysit, ws-headers: {Host: www.17080100.xyz}}
+  - {name: USA 🇺🇸 California 10 Glysit, server: www.17080100.xyz Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/310910211916 Glysit, ws-headers: {Host: www.17080100.xyz}}
+  - {name: USA 🇺🇸 California 11 Glysit, server: www.92726054.xyz Glysit, port: 443 Glysit, type: vmess Glysit, uuid: d3cbe556-8db3-47e0-8ef1-06b2cce00411 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/310910211916 Glysit, ws-headers: {Host: www.92726054.xyz}}
+  - {name: USA 🇺🇸 California 13 Glysit, server: 107.167.9.124 Glysit, port: 443 Glysit, type: vmess Glysit, uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724 Glysit, alterId: 64 Glysit, cipher: auto Glysit, tls: true Glysit, network: ws Glysit, ws-path: /path/310910211916 Glysit, ws-headers: {Host: www.17080100.xyz}}
+
+proxy-groups:
+  - name: 🔰 SS & SSR
+    type: select
+    proxies:
+      - 🔥 Auto(Best ping)
+      - ↪️ use (vmess & trojan) group
+      - ALB 🇦🇱 Tirana
+      - ALB 🇦🇱 Tirana 2
+      - ALB 🇦🇱 Tirana 3
+      - ARG 🇦🇷 Buenos Aires
+      - ARG 🇦🇷 Buenos Aires new
+      - ARG 🇦🇷 Buenos Aires 2
+      - AUS 🇦🇺 Alexandria new
+      - AUS 🇦🇺 Brisbane
+      - AUS 🇦🇺 Melbourne
+      - AUS 🇦🇺 Perth
+      - AUS 🇦🇺 Sydney
+      - AUS 🇦🇺 Adelaide
+      - AUT 🇦🇹 Graz new
+      - AUT 🇦🇹 Vienna
+      - AZR 🇦🇿 Baku
+      - AZR 🇦🇿 Baku 2
+      - AZR 🇦🇿 Baku 3
+      - AZR 🇦🇿 Baku 4
+      - AZR 🇦🇿 Baku 5
+      - BEL 🇧🇪 Belgium
+      - BEL 🇧🇪 Belgium 2
+      - BEL 🇧🇪 Flanders new
+      - BEL 🇧🇪 Flanders 2 new
+      - BGR 🇧🇬 Sofia new
+      - BGR 🇧🇬 Sofia 2 new
+      - BGR 🇧🇬 Sofia 3 new
+      - BGR 🇧🇬 Sofia 4 new
+      - BiH 🇧🇦 Sarajevo
+      - BRA 🇧🇷 Sao Paulo
+      - BRA 🇧🇷 Sao Paulo new
+      - BRA 🇧🇷 Sao Paulo 2
+      - BRA 🇧🇷 Sao Paulo 2 new
+      - CAN 🇨🇦 Montreal
+      - CAN 🇨🇦 Montreal new
+      - CAN 🇨🇦 Montreal 2 new
+      - CAN 🇨🇦 Toronto
+      - CAN 🇨🇦 Vancouver
+      - CHL ⃕ ␋ 🇨🇱 San Antonio
+      - CHL 🇨🇱 Viña del Mar new
+      - COL 🇨🇴 Bagotá
+      - CROA 🇭🇷 Zagreb
+      - CROA 🇭🇷 Zagreb 2
+      - CROA 🇭🇷 Zagreb 3
+      - CYP 🇨🇾 Nicosia
+      - CYP 🇨🇾 Nicosia new
+      - CYP 🇨🇾 Nicosia 2 new
+      - CZE 🇨🇿 Prague
+      - CZE 🇨🇿 Prague new
+      - DNK 🇩🇰 Copenhagen
+      - DNK 🇩🇰 Copenhagen new
+      - DNK 🇩🇰 Copenhagen 2
+      - DNK 🇩🇰 Copenhagen 2 new
+      - DZA 🇩🇿 Algiers
+      - EST 🇪🇪 Tallinn
+      - EST 🇪🇪 Tallinn new
+      - FIN 🇫🇮 Helsinki new
+      - FRA 🇫🇷 Bordeaux
+      - FRA 🇫🇷 Bordeaux 2
+      - FRA 🇫🇷 Bordeaux 3
+      - FRA 🇫🇷 Gravelines new
+      - FRA 🇫🇷 Marseille
+      - FRA 🇫🇷 Paris 1
+      - FRA 🇫🇷 Paris 2
+      - FRA 🇫🇷 Roubaix
+      - FRA 🇫🇷 Roubaix 3
+      - FRA 🇫🇷 Strasbourg new
+      - GEO 🇬🇪🇲 Tbilisi
+      - GER 🇩🇪 Düsseldorf new
+      - GER 🇩🇪 Frankfurt
+      - GER 🇩🇪 Frankfurt 2
+      - GER 🇩🇪 Frankfurt 3
+      - GER 🇩🇪 Frankfurt 4 
+      - GER 🇩🇪 Frankfurt 5 
+      - GER 🇩🇪 Berlin 1
+      - GER 🇩🇪 Berlin 2
+      - GER 🇩🇪 Berlin 3
+      - GER 🇩🇪 Berlin 4
+      - GER 🇩🇪 Nuremberg new
+      - GRC 🇬🇷 Athens
+      - HUN 🇭🇺 Budapest 1
+      - HKG 🇭🇰 Central new
+      - HUN 🇭🇺 Budapest new
+      - IND 🇮🇳 Bengaluru new
+      - IND 🇮🇳 Chennai
+      - IND 🇮🇳 Chennai 2
+      - IND 🇮🇳 Indore
+      - IRL 🇮🇪 Dublin
+      - IRL 🇮🇪 Dublin 2
+      - IRL 🇮🇪 Dublin 3
+      - IRL 🇮🇪 Tallaght new
+      - IRL 🇮🇪 Tallaght 2 new
+      - ISL 🇮🇸 Hafnarfjordur new
+      - ISL 🇮🇸 Reykjavik
+      - ISL 🇮🇸 Reykjavik 2
+      - ISR 🇮🇱 Tel Aviv
+      - ITA 🇮🇹 Milan new
+      - ITA 🇮🇹 Milan 1
+      - ITA 🇮🇹 Milan 2
+      - ITA 🇮🇹 Milan 3
+      - ITA 🇮🇹 Milan 4
+      - ITA 🇮🇹 Rome
+      - JPN 🇯🇵 Tokyo
+      - JPN 🇯🇵 Tokyo new
+      - JPN 🇯🇵 Tokyo 2
+      - JPN 🇯🇵 Tokyo 3
+      - LIT 🇱🇹 Vilnius
+      - LUX 🇱🇺 Luxembourg
+      - LUX 🇱🇺 Luxembourg new
+      - LUX 🇱🇺 Luxembourg 2 new
+      - LVA 🇱🇻 Riga
+      - MDA 🇲🇩 Chișinău
+      - MDA 🇲🇩 Chisinau new
+      - MEX 🇲🇽 Mexico City
+      - MKD 🇲🇰 Skopje
+      - MLT 🇲🇹 Valletta
+      - MLT 🇲🇹 Safi new
+      - MYS 🇲🇾 Kuala Lumpur
+      - MYS 🇲🇾 Kuala Lumpur new
+      - NGA 🇳🇬 Lagos
+      - NGA 🇳🇬 Lagos 2
+      - NLD 🇳🇱 Amsterdam new
+      - NLD 🇳🇱 Amsterdam 1
+      - NLD 🇳🇱 Amsterdam 2
+      - NLD 🇳🇱 Amsterdam 3
+      - NOR 🇳🇴 Oslo
+      - NOR 🇳🇴 Oslo new
+      - NOR 🇳🇴 Oslo 2 new
+      - NOR 🇳🇴 Oslo 3 new
+      - NZL 🇳🇿 Auckland
+      - PNM 🇵🇦 Panama
+      - POL 🇵🇱 Gdansk
+      - POL 🇵🇱 Warsaw 1
+      - POL 🇵🇱 Wroclaw new
+      - POL 🇵🇱 Wroclaw 2 new
+      - PRT 🇵🇹 Lisbon
+      - PRT 🇵🇹 Lisbon new
+      - PRT 🇵🇹 Porto
+      - PRU 🇵🇪 Lima
+      - ROU 🇷🇴 Bucharest
+      - RUS 🇷🇺 Moscow
+      - RUS 🇷🇺 Moscow new
+      - RUS 🇷🇺 Moscow 2 new
+      - RUS 🇷🇺 Moscow 2
+      - SNG 🇸🇬 Singapore
+      - SNG 🇸🇬 Singapore new
+      - SOAF 🇿🇦 Cape Town new
+      - SOAF 🇿🇦 Cape Town 2 new
+      - SOAF 🇿🇦 Johannesburg
+      - SPN 🇪🇸 Barcelona
+      - SPN 🇪🇸 Madrid
+      - SPN 🇪🇸 Madrid new
+      - SPN 🇪🇸 Valencia
+      - SVK 🇸🇰 Bratislava
+      - SVK 🇸🇰 Bratislava new
+      - SVN 🇸🇮 Ljubljana new
+      - SWE 🇸🇪 Stockholm 1
+      - SWE 🇸🇪 Stockholm new
+      - SWIT 🇨🇭 Zurich
+      - SWIT 🇨🇭 Zurich new
+      - TH 🇹🇭 Bangkok
+      - THA 🇹🇭 Bangkok new
+      - TUR 🇹🇷 Istanbul
+      - TUR 🇹🇷 Istanbul new
+      - TWN 🇹🇼 Taichung
+      - TWN 🇹🇼 Taichung 2
+      - TWN 🇹🇼 Taichung 3
+      - UAE 🇦🇪 Dubai 1
+      - UAE 🇦🇪 Dubai 2
+      - UAE 🇦🇪 Dubai 3
+      - UK 🇬🇧 Glasgow
+      - UK 🇬🇧 London new
+      - UK 🇬🇧 London 1
+      - UK 🇬🇧 London 3
+      - UK 🇬🇧 London 4
+      - UK 🇬🇧 Manchester
+      - UK 🇬🇧 Manchester 2
+      - UKR 🇺🇦 Kyiv
+      - UKR 🇺🇦 Kyiv new
+      - UKR 🇺🇦 Kyiv 2
+      - USA 🇺🇲 Virginia new
+      - USA 🇺🇲 Virginia 2 new
+      - USA 🇺🇲 Virginia 3 new
+      - USA 🇺🇲 Virginia 4 new
+      - USA 🇺🇲 Virginia 5 new
+      - USA 🇺🇲 Virginia 6 new
+      - USA 🇺🇸 Atlanta
+      - USA 🇺🇸 Bend 1
+      - USA 🇺🇸 Bend 1 2
+      - USA 🇺🇸 Bend 2
+      - USA 🇺🇸 Bend 2 2
+      - USA 🇺🇸 Boston 1
+      - USA 🇺🇸 Charlotte
+      - USA 🇺🇸 Charlotte 1
+      - USA 🇺🇸 Charlotte 2
+      - USA 🇺🇸 Chicago 1
+      - USA 🇺🇸 Chicago 2
+      - USA 🇺🇸 Detroit 1
+      - USA 🇺🇸 Detroit 2
+      - USA 🇺🇸 Detroit 3
+      - USA 🇺🇸 Detroit 4
+      - USA 🇺🇸 Houston 1
+      - USA 🇺🇸 Houston 2
+      - USA 🇺🇸 Houston 3
+      - USA 🇺🇸 Houston 4
+      - USA 🇺🇸 Kansas City
+      - USA 🇺🇸 Kansas City 1
+      - USA 🇺🇸 Kansas City 2
+      - USA 🇺🇸 Las Vegas 1
+      - USA 🇺🇸 Las Vegas 2
+      - USA 🇺🇸 Las Vegas 3
+      - USA 🇺🇸 Latham 1
+      - USA 🇺🇸 Latham 2
+      - USA 🇺🇸 Latham 3
+      - USA 🇺🇸 Los Angeles 2
+      - USA 🇺🇸 Los Angeles 3
+      - USA 🇺🇸 Miami
+      - USA 🇺🇸 New York 2
+      - USA 🇺🇸 Orlando 1
+      - USA 🇺🇸 Orlando 2
+      - USA 🇺🇸 Phoenix 1 2
+      - USA 🇺🇸 Phoenix 2 2
+      - USA 🇺🇸 San Francisco
+      - USA 🇺🇸 St. Louis 2
+      - USA 🇺🇸 Tampa 1
+      - USA 🇺🇸 Tampa 2
+      - USA 🇺🇸 Tampa 3
+      - USA 🇺🇸 Tampa 4
+      - VEN 🇻🇪 Caracas
+      - 🔥 Auto(Best ping)
+      - ↪️ use (vmess & trojan) group
+  
+  - name: 🔰 vmess & trojan
+    type: select
+    proxies:
+      - ↪️ use (SS & SSR) group
+      - 🔥 Auto2(Best ping)       
+      - BHR 🇧🇭 Dar Kulayb
+      - BAH 🇧🇭 Dar Kulayb 2
+      - FRA 🇫🇷 France
+      - GER 🇩🇪 GER
+      - GER 🇩🇪 GER 2
+      - GER 🇩🇪 GER 3
+      - GER 🇩🇪 GER 4
+      - GER 🇩🇪 GER 5
+      - GER 🇩🇪 GER 6
+      - GER 🇩🇪 GER 7
+      - GER 🇩🇪 GER 8
+      - GER 🇩🇪 GER 9
+      - GER 🇩🇪 GER 10
+      - GER 🇩🇪 GER 11
+      - GER 🇩🇪 GER 12
+      - GER 🇩🇪 GER 13
+      - GER 🇩🇪 GER 14
+      - GER 🇩🇪 GER 15
+      - GER 🇩🇪 GER 16
+      - GER 🇩🇪 GER 17
+      - HKG 🇭🇰 Hong Kong 2
+      - HKG 🇭🇰 Hong Kong 6
+      - JPN 🇯🇵 Tokyo 10
+      - NLD 🇳🇱 NLD 2
+      - NLD 🇳🇱 NLD 3
+      - NLD 🇳🇱 NLD 4
+      - NLD 🇳🇱 NLD 5
+      - NLD 🇳🇱 NLD 8
+      - NLD 🇳🇱 NLD 9
+      - NLD 🇳🇱 NLD 10
+      - NLD 🇳🇱 NLD 11
+      - PRC 🇨🇳 China 4
+      - RUS 🇷🇺 RUS
+      - RUS 🇷🇺 RUS 2
+      - TUR 🇹🇷 Bursa
+      - TWN 🇹🇼 Taipei
+      - USA 🇺🇸 USA
+      - USA 🇺🇸 USA 3
+      - USA 🇺🇸 USA 4
+      - USA 🇺🇸 USA 7
+      - USA 🇺🇸 California 6
+      - USA 🇺🇸 California 7
+      - USA 🇺🇸 California 10
+      - USA 🇺🇸 California 11
+      - USA 🇺🇸 California 13
+      - 🔥 Auto2(Best ping) 
+      - ↪️ use (SS & SSR) group
+ 
+  - name: 🔥 Auto(Best ping)
+    type: url-test
+    url: https://www.google.com
+    interval: 1500
+    proxies:
+      - ALB 🇦🇱 Tirana
+      - ALB 🇦🇱 Tirana 2
+      - ALB 🇦🇱 Tirana 3
+      - ARG 🇦🇷 Buenos Aires
+      - ARG 🇦🇷 Buenos Aires new
+      - ARG 🇦🇷 Buenos Aires 2
+      - AUS 🇦🇺 Alexandria new
+      - AUS 🇦🇺 Brisbane
+      - AUS 🇦🇺 Melbourne
+      - AUS 🇦🇺 Perth
+      - AUS 🇦🇺 Sydney
+      - AUT 🇦🇹 Graz new
+      - AZR 🇦🇿 Baku
+      - AZR 🇦🇿 Baku 2
+      - AZR 🇦🇿 Baku 3
+      - AZR 🇦🇿 Baku 4
+      - AZR 🇦🇿 Baku 5
+      - BEL 🇧🇪 Belgium
+      - BEL 🇧🇪 Belgium 2
+      - BEL 🇧🇪 Flanders new
+      - BEL 🇧🇪 Flanders 2 new
+      - BGR 🇧🇬 Sofia new
+      - BGR 🇧🇬 Sofia 2 new
+      - BGR 🇧🇬 Sofia 3 new
+      - BGR 🇧🇬 Sofia 4 new
+      - BiH 🇧🇦 Sarajevo
+      - BRA 🇧🇷 Sao Paulo
+      - BRA 🇧🇷 Sao Paulo new
+      - BRA 🇧🇷 Sao Paulo 2
+      - BRA 🇧🇷 Sao Paulo 2 new
+      - CAN 🇨🇦 Montreal
+      - CAN 🇨🇦 Montreal new
+      - CAN 🇨🇦 Montreal 2 new
+      - CAN 🇨🇦 Toronto
+      - CAN 🇨🇦 Vancouver
+      - CHL 🇨🇱 Viña del Mar new
+      - CROA 🇭🇷 Zagreb
+      - CROA 🇭🇷 Zagreb 2
+      - CROA 🇭🇷 Zagreb 3
+      - CYP 🇨🇾 Nicosia
+      - CYP 🇨🇾 Nicosia new
+      - CYP 🇨🇾 Nicosia 2 new
+      - CZE 🇨🇿 Prague
+      - CZE 🇨🇿 Prague new
+      - DNK 🇩🇰 Copenhagen
+      - DNK 🇩🇰 Copenhagen new
+      - DNK 🇩🇰 Copenhagen 2
+      - DNK 🇩🇰 Copenhagen 2 new
+      - DZA 🇩🇿 Algiers
+      - EST 🇪🇪 Tallinn
+      - EST 🇪🇪 Tallinn new
+      - FIN 🇫🇮 Helsinki new
+      - FRA 🇫🇷 Bordeaux
+      - FRA 🇫🇷 Bordeaux 2
+      - FRA 🇫🇷 Bordeaux 3
+      - FRA 🇫🇷 Gravelines new
+      - FRA 🇫🇷 Marseille
+      - FRA 🇫🇷 Paris 1
+      - FRA 🇫🇷 Paris 2
+      - FRA 🇫🇷 Roubaix
+      - FRA 🇫🇷 Roubaix 3
+      - FRA 🇫🇷 Strasbourg new
+      - GEO 🇬🇪🇲 Tbilisi
+      - GER 🇩🇪 Düsseldorf new
+      - GER 🇩🇪 Frankfurt
+      - GER 🇩🇪 Frankfurt 2
+      - GER 🇩🇪 Frankfurt 3
+      - GER 🇩🇪 Frankfurt 4
+      - GER 🇩🇪 Frankfurt 5
+      - GER 🇩🇪 Berlin 1
+      - GER 🇩🇪 Berlin 2
+      - GER 🇩🇪 Berlin 3
+      - GER 🇩🇪 Berlin 4
+      - GER 🇩🇪 Nuremberg new
+      - GRC 🇬🇷 Athens
+      - HKG 🇭🇰 Central new
+      - HUN 🇭🇺 Budapest 1
+      - HUN 🇭🇺 Budapest new
+      - IND 🇮🇳 Bengaluru new
+      - IND 🇮🇳 Chennai
+      - IND 🇮🇳 Chennai 2
+      - IND 🇮🇳 Indore
+      - IRL 🇮🇪 Dublin
+      - IRL 🇮🇪 Dublin 2
+      - IRL 🇮🇪 Dublin 3
+      - IRL 🇮🇪 Tallaght new
+      - IRL 🇮🇪 Tallaght 2 new
+      - ISL 🇮🇸 Hafnarfjordur new
+      - ISL 🇮🇸 Reykjavik
+      - ISL 🇮🇸 Reykjavik 2
+      - ISR 🇮🇱 Tel Aviv
+      - ITA 🇮🇹 Milan new
+      - ITA 🇮🇹 Milan 1
+      - ITA 🇮🇹 Milan 2
+      - ITA 🇮🇹 Milan 3
+      - ITA 🇮🇹 Milan 4
+      - ITA 🇮🇹 Rome
+      - JPN 🇯🇵 Tokyo
+      - JPN 🇯🇵 Tokyo new
+      - JPN 🇯🇵 Tokyo 2
+      - JPN 🇯🇵 Tokyo 3
+      - LIT 🇱🇹 Vilnius
+      - LUX 🇱🇺 Luxembourg
+      - LUX 🇱🇺 Luxembourg new
+      - LUX 🇱🇺 Luxembourg 2 new
+      - LVA 🇱🇻 Riga
+      - MDA 🇲🇩 Chișinău
+      - MDA 🇲🇩 Chisinau new
+      - MEX 🇲🇽 Mexico City
+      - MKD 🇲🇰 Skopje
+      - MLT 🇲🇹 Valletta
+      - MLT 🇲🇹 Safi new
+      - MYS 🇲🇾 Kuala Lumpur
+      - MYS 🇲🇾 Kuala Lumpur new
+      - NGA 🇳🇬 Lagos
+      - NGA 🇳🇬 Lagos 2
+      - NLD 🇳🇱 Amsterdam new
+      - NLD 🇳🇱 Amsterdam 1
+      - NLD 🇳🇱 Amsterdam 2
+      - NLD 🇳🇱 Amsterdam 3
+      - NOR 🇳🇴 Oslo
+      - NOR 🇳🇴 Oslo new
+      - NOR 🇳🇴 Oslo 2 new
+      - NOR 🇳🇴 Oslo 3 new
+      - NZL 🇳🇿 Auckland
+      - PNM 🇵🇦 Panama
+      - POL 🇵🇱 Gdansk
+      - POL 🇵🇱 Warsaw 1
+      - POL 🇵🇱 Wroclaw new
+      - POL 🇵🇱 Wroclaw 2 new
+      - PRT 🇵🇹 Lisbon
+      - PRT 🇵🇹 Lisbon new
+      - PRT 🇵🇹 Porto
+      - ROU 🇷🇴 Bucharest
+      - RUS 🇷🇺 Moscow
+      - RUS 🇷🇺 Moscow new
+      - RUS 🇷🇺 Moscow 2 new
+      - RUS 🇷🇺 Moscow 2
+      - SNG 🇸🇬 Singapore
+      - SNG 🇸🇬 Singapore new
+      - SOAF 🇿🇦 Cape Town new
+      - SOAF 🇿🇦 Cape Town 2 new
+      - SOAF 🇿🇦 Johannesburg
+      - SPN 🇪🇸 Barcelona
+      - SPN 🇪🇸 Madrid
+      - SPN 🇪🇸 Madrid new
+      - SPN 🇪🇸 Valencia
+      - SVK 🇸🇰 Bratislava
+      - SVK 🇸🇰 Bratislava new
+      - SVN 🇸🇮 Ljubljana new
+      - SWE 🇸🇪 Stockholm new
+      - SWIT 🇨🇭 Zurich
+      - SWIT 🇨🇭 Zurich new
+      - TH 🇹🇭 Bangkok
+      - THA 🇹🇭 Bangkok new
+      - TUR 🇹🇷 Istanbul
+      - TUR 🇹🇷 Istanbul new
+      - TWN 🇹🇼 Taichung
+      - TWN 🇹🇼 Taichung 2
+      - TWN 🇹🇼 Taichung 3
+      - UAE 🇦🇪 Dubai 1
+      - UAE 🇦🇪 Dubai 2
+      - UAE 🇦🇪 Dubai 3
+      - UK 🇬🇧 Glasgow
+      - UK 🇬🇧 London new
+      - UK 🇬🇧 London 1
+      - UK 🇬🇧 London 3
+      - UK 🇬🇧 London 4
+      - UK 🇬🇧 Manchester
+      - UK 🇬🇧 Manchester 2
+      - UKR 🇺🇦 Kyiv
+      - UKR 🇺🇦 Kyiv new
+      - UKR 🇺🇦 Kyiv 2
+      - USA 🇺🇲 Virginia new
+      - USA 🇺🇲 Virginia 2 new
+      - USA 🇺🇲 Virginia 3 new
+      - USA 🇺🇲 Virginia 4 new
+      - USA 🇺🇲 Virginia 5 new
+      - USA 🇺🇲 Virginia 6 new
+      - USA 🇺🇸 Atlanta
+      - USA 🇺🇸 Bend 1
+      - USA 🇺🇸 Bend 1 2
+      - USA 🇺🇸 Bend 2
+      - USA 🇺🇸 Bend 2 2
+      - USA 🇺🇸 Boston 1
+      - USA 🇺🇸 Charlotte
+      - USA 🇺🇸 Charlotte 1
+      - USA 🇺🇸 Charlotte 2
+      - USA 🇺🇸 Chicago 1
+      - USA 🇺🇸 Chicago 2
+      - USA 🇺🇸 Detroit 1
+      - USA 🇺🇸 Detroit 2
+      - USA 🇺🇸 Detroit 3
+      - USA 🇺🇸 Detroit 4
+      - USA 🇺🇸 Houston 1
+      - USA 🇺🇸 Houston 2
+      - USA 🇺🇸 Houston 3
+      - USA 🇺🇸 Houston 4
+      - USA 🇺🇸 Kansas City
+      - USA 🇺🇸 Kansas City 1
+      - USA 🇺🇸 Kansas City 2
+      - USA 🇺🇸 Las Vegas 1
+      - USA 🇺🇸 Las Vegas 2
+      - USA 🇺🇸 Las Vegas 3
+      - USA 🇺🇸 Latham 1
+      - USA 🇺🇸 Latham 2
+      - USA 🇺🇸 Latham 3
+      - USA 🇺🇸 Los Angeles 2
+      - USA 🇺🇸 Los Angeles 3
+      - USA 🇺🇸 Miami
+      - USA 🇺🇸 New York 2
+      - USA 🇺🇸 Orlando 1
+      - USA 🇺🇸 Orlando 2
+      - USA 🇺🇸 Phoenix 1 2
+      - USA 🇺🇸 Phoenix 2 2
+      - USA 🇺🇸 San Francisco
+      - USA 🇺🇸 St. Louis 2
+      - USA 🇺🇸 Tampa 1
+      - USA 🇺🇸 Tampa 2
+      - USA 🇺🇸 Tampa 3
+      - USA 🇺🇸 Tampa 4
+
+  - name: 🔥 Auto2(Best ping)
+    type: url-test
+    url: https://www.google.com
+    interval: 1500
+    proxies:
+      - BHR 🇧🇭 Dar Kulayb
+      - BAH 🇧🇭 Dar Kulayb 2
+      - DNK 🇩🇰 Copenhagen 3
+      - DNK 🇩🇰 Copenhagen 4
+      - FRA 🇫🇷 France
+      - FRA 🇫🇷 Carpentras
+      - FRA 🇫🇷 Longjumeau
+      - FRA 🇫🇷 Paris 3
+      - GER 🇩🇪 GER
+      - GER 🇩🇪 GER 2
+      - GER 🇩🇪 GER 3
+      - GER 🇩🇪 GER 4
+      - GER 🇩🇪 GER 5
+      - GER 🇩🇪 GER 6
+      - GER 🇩🇪 GER 7
+      - GER 🇩🇪 GER 8
+      - GER 🇩🇪 GER 9
+      - GER 🇩🇪 GER 10
+      - GER 🇩🇪 GER 11
+      - GER 🇩🇪 GER 12
+      - GER 🇩🇪 GER 13
+      - GER 🇩🇪 GER 14
+      - GER 🇩🇪 GER 15
+      - GER 🇩🇪 GER 16
+      - GER 🇩🇪 GER 17
+      - HKG 🇭🇰 Hong Kong
+      - HKG 🇭🇰 Hong Kong 2
+      - HKG 🇭🇰 Hong Kong 3
+      - HKG 🇭🇰 Hong Kong 4
+      - HKG 🇭🇰 Hong Kong 5
+      - HKG 🇭🇰 Hong Kong 6
+      - HKG 🇭🇰 Hong Kong 7
+      - HUN 🇭🇺 Budapest
+      - IDN 🇮🇩 Bogor
+      - IND 🇮🇳 Bengaluru 2
+      - IRL 🇮🇪 Dublin 4
+      - IRL 🇮🇪 Dublin 5
+      - JPN 🇯🇵 JPN
+      - JPN 🇯🇵 Tokyo 4
+      - JPN 🇯🇵 Tokyo 5
+      - JPN 🇯🇵 Tokyo 6
+      - JPN 🇯🇵 Tokyo 7
+      - JPN 🇯🇵 Tokyo 8
+      - JPN 🇯🇵 Tokyo 9
+      - JPN 🇯🇵 Tokyo 10
+      - LUX 🇱🇺 Bissen 2
+      - NLD 🇳🇱 NLD 2
+      - NLD 🇳🇱 NLD 3
+      - NLD 🇳🇱 NLD 4
+      - NLD 🇳🇱 NLD 5
+      - NLD 🇳🇱 NLD 8
+      - NLD 🇳🇱 NLD 9
+      - NLD 🇳🇱 NLD 10
+      - NLD 🇳🇱 NLD 11
+      - NLD 🇳🇱 NLD 12
+      - NLD 🇳🇱 NLD 13
+      - POL 🇵🇱 Warsaw
+      - PRC 🇨🇳 China 4
+      - PRC 🇨🇳 China 5
+      - RUS 🇷🇺 RUS
+      - RUS 🇷🇺 RUS 2
+      - RUS 🇷🇺 RUS 4
+      - SGP 🇸🇬 Singapore
+      - TUR 🇹🇷 Bursa
+      - TWN 🇹🇼 Taipei
+      - UK 🇬🇧 London 5
+      - USA 🇺🇸 USA
+      - USA 🇺🇸 USA 3
+      - USA 🇺🇸 USA 4
+      - USA 🇺🇸 USA 7
+      - USA 🇺🇸 California 6
+      - USA 🇺🇸 California 7
+      - USA 🇺🇸 California 10
+      - USA 🇺🇸 California 11
+      - USA 🇺🇸 California 13
+  - name: ↪️ use (vmess & trojan) group      
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: ↪️ use (SS & SSR) group      
+    type: select
+    proxies:
+      - 🔰 SS & SSR
+
+  - name: ⛔Direct
+    type: select
+    proxies:
+      - DIRECT
+
+rules:
+ - MATCH  Glysit,🔰 SS & SSR  Glysit,🔰 vmess & trojan
